@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shop</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            padding: 2px;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        #navbar {
+            padding-top: 15px;
+            padding-bottom: 20px;
+            display: flex;
+            position: fixed;
+            top: 0px;
+            width: 98.2%;
+            height: 100px;
+            background-color: white;
+        }
+        
+        ul {
+            display: flex;
+            list-style-type: none;
+            margin-left: 190px;
+        }
+        
+        li {
+            margin: 10px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: rosybrown;
+        }
+        
+        li:hover {
+            color: black;
+            /* background-color: white; */
+            /* border: 1px solid orange; */
+            /* border-radius: 10px;
+            padding-bottom: 10px; */
+            cursor: pointer;
+        }
+        
+        span {
+            padding-top: 15px;
+            font-size: 1.7rem;
+            color: rosybrown;
+        }
+        
+        .fa {
+            padding-top: 15px;
+            color: black;
+            padding-left: 10px;
+            font-size: 34px;
+        }
+        
+        #vdo {
+            background: url(images/shop.jpg);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 650px;
+            margin-top: 40px;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 3.7rem;
+            color: black;
+            background-color: rgb(195, 169, 169);
+        }
+        
+        #teen {
+            display: flex;
+            padding-left: 90px;
+            padding-right: 60px;
+        }
+        
+        .image {
+            width: 30%;
+            height: 500px;
+            border: 10px double white;
+            border-radius: 100px;
+            margin: 15px;
+            padding: 50px;
+            background-color: rgb(195, 165, 165);
+        }
+        
+        .image:hover {
+            background-color: white;
+            border: 10px double rosybrown;
+            cursor: pointer;
+        }
+        
+        .image:hover p {
+            color: black;
+        }
+        
+        #four {
+            display: flex;
+            padding-left: 90px;
+            padding-right: 30px;
+            flex-wrap: wrap;
+        }
+        
+        #five {
+            display: flex;
+            padding-left: 90px;
+            padding-right: 30px;
+        }
+        
+        .prod {
+            width: 29%;
+            height: 400px;
+            border: 10px double white;
+            /* border-radius: 10px; */
+            margin: 15px;
+            padding: 30px;
+            background-color: rgb(195, 165, 165);
+        }
+        
+        .prod:hover {
+            background-color: white;
+            border: 6px double rosybrown;
+        }
+        
+        .cust {
+            width: 29%;
+            height: 400px;
+            border: 10px double white;
+            /* border-radius: 10px; */
+            margin: 15px;
+            padding: 30px;
+            background-color: rgb(195, 165, 165);
+        }
+        
+        button {
+            background-color: white;
+            color: black;
+            padding: 10px 15px 10px 15px;
+            margin-left: 100px;
+            margin-top: 15px;
+            border: 2px solid orange;
+            outline: 1px solid black;
+            font-weight: bold;
+        }
+        
+        button:hover {
+            background-color: rosybrown;
+            color: white;
+            padding: 15px 20px 15px 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .icons {
+            color: black;
+            font-size: 34px;
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+        
+        H2 {
+            text-align: center;
+        }
+        
+        h3 {
+            text-align: center;
+        }
+        
+        p {
+            color: white
+        }
+        
+        .ion {
+            font-size: 24px;
+            color: white;
+        }
+        
+        .stars {
+            /* border: 2px solid white; */
+            width: 300px;
+            height: 50px;
+            text-align: center;
+        }
+        
+        .checked {
+            color: white;
+        }
+        
+        #foot {
+            height: 300px;
+            border: 2px solid black;
+            display: flex;
+            background-color: rgb(195, 165, 165);
+        }
+        
+        #one {
+            width: 30%;
+            /* border: 2px solid black; */
+            font-size: 1.5rem;
+        }
+        
+        #two {
+            width: 30%;
+            /* border: 2px solid black; */
+            font-size: 1.5rem;
+        }
+        
+        #third {
+            width: 30%;
+            /* border: 2px solid black; */
+            font-size: 1.5rem;
+        }
+        
+        #fourth {
+            width: 30%;
+            /* border: 2px solid black; */
+            font-size: 1.5rem;
+        }
+        
+        #last {
+            border: 2px solid black;
+            background-color: white;
+            display: flex;
+            height: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header id="#home">
+        <nav id="navbar">
+            <ion-icon name="earth-sharp" class="fa"></ion-icon><span style="padding-left: 10px;">The</span><span>Kasaudhan's</span>
+            <ul>
+                <li>HOME</li>
+                <li>FEATURES</li>
+                <li>PRODUCTS</li>
+                <li>CATEGORIES</li>
+                <li>REVIEW</li>
+            </ul>
+            <ion-icon name="search-circle-outline" class="icons"></ion-icon>
+            <ion-icon name="cart" class="icons"></ion-icon>
+            <ion-icon name="people-circle" class="icons"></ion-icon>
+        </nav>
+
+        <div id="vdo"></div>
+    </header>
+    <div id="features">
+        <h1>OUR FEATURES</h1>
+        <div id="teen">
+            <div class="image"><img src="images/Dry-Fruit-PNG-Photos.png" alt="dry" width="250px" height="200px">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quaerat error iusto odio assumenda labore, vel, ad reiciendis.</p>
+                <button>Read More</button> </div>
+            <div class="image"><img src="images/dlvry.png" alt="dlvry" width="250px" height="200px">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quaerat error iusto odio assumenda labore, vel, ad reiciendis.</p>
+                <button>Read More</button> </div>
+
+            <div class="image"><img src="images/pay.png" alt="pay" width="300px" height="200px">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quaerat error iusto odio assumenda labore, vel, ad reiciendis.</p>
+                <button>Read More</button> </div>
+        </div>
+    </div>
+    <div id="product">
+        <h1>OUR PRODUCTS</h1>
+        <div id="four">
+            <div class="prod"><img src="images/dal.jpg" alt="dry" width="300px" height="200px">
+                <h2>DAAL</h2>
+                <h3>Rs.100/kg - 200/kg</h3>
+                <button>Add to cart</button> </div>
+            <div class="prod"><img src="images/chaw.jpg" alt="dlvry" width="300px" height="200px">
+                <H2>CHAWAL</H2>
+                <h3>Rs.50/kg - 150/kg</h3>
+                <button>Add to cart</button> </div>
+
+            <div class="prod"><img src="images/masala.jpg" alt="pay" width="300px" height="200px">
+                <H2>MASALE</H2>
+                <h3>Rs.50/gm - 150/gm</h3>
+                <button>Add to cart</button> </div><br>
+
+            <div class="prod"><img src="images/cheeni.jpg" alt="dry" width="300px" height="200px">
+                <H2>CHEENI & NAMAK</H2>
+                <h3>Rs.40/kg - 70/kg</h3>
+                <button>Add to cart</button> </div>
+            <div class="prod"><img src="images/aata.jpg" alt="dlvry" width="300px" height="200px">
+                <H2>AATA</H2>
+                <h3>Rs.90/kg - 190/kg</h3>
+                <button>Add to cart</button> </div>
+
+            <div class="prod"><img src="images/sabun.jpg" alt="pay" width="300px" height="200px">
+                <H2>SABUN</H2>
+                <h3>Rs.10/pc - 50/pc</h3>
+                <button>Add to cart</button> </div>
+        </div>
+    </div>
+    <div id="cust">
+        <h1>CUSTOMER REVIEWS</h1>
+        <div id="five">
+            <div class="cust"><img src="images/p1.jpg" alt="dry " width="200px " height="150px " width="200px " height="150px " style="border: 2px solid black;border-radius: 100%;margin-left: 50px;"><br>
+                <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked "></span>
+                    <span class="fa fa-star checked"></span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quaerat error iusto odio assumenda labore, vel, ad reiciendis.</p>
+            </div>
+            <div class="cust "><img src="images/p2.jpg" alt="dlvry " width="200px " height="150px " style="border: 2px solid black;border-radius: 100%;margin-left: 50px;"><br>
+                <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quaerat error iusto odio assumenda labore, vel, ad reiciendis.</p>
+            </div>
+
+            <div class="cust "><img src="images/p3.jpg" alt="pay " width="200px " height="150px " style="border: 2px solid black;border-radius: 100%;margin-left: 50px;"><br>
+                <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quaerat error iusto odio assumenda labore, vel, ad reiciendis.</p>
+            </div>
+        </div>
+    </div>
+    <footer id="foot">
+        <div id="one">
+            <h4 style="margin-top: 20px;margin-left:40px;font-size: 1.7rem;">THANKS FOR<br> VISITING!</h4>
+            <p style="margin-left: 40px;font-size: 1.2rem;">Lorem ipsum dolor sit amet<br> consectetur adipisicing elit.<br> Quas, necessitatibus<br> accusantium. </p>
+        </div>
+        <div id="two">
+            <h5 style="font-size: 1.7rem;margin-top: 20px;margin-left: 25px;">QUICK LINKS</h5>
+            <div style="font-size: 1.4rem;color: white;margin-left: 28px;margin-top: -50px;"><br>About<br> Products
+                <br>Features<br>Customers<br>Contact Us</div>
+
+        </div>
+        <div id="third">
+            <h2 style="text-align: left;padding: 0px 40px 0px 40px;font-size: 1.7rem;">CONTACT US</h2>
+            <p style="text-align: left; padding: 0px 40px 0px 40px;font-size: 1.2rem;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, sapiente magni magnam, facere dicta at assumenda eaque facilis quisquam
+                <br><br> PHONE: 05346
+                <br>
+                <BR>support@infinity.com </p>
+        </div>
+        <div id="fourth">
+            <h2 style="text-align: left;padding: 0px 40px 0px 40px;font-size: 1.7rem;">NEWSLETTER</h2>
+            <p style="text-align: left; padding: 0px 40px 0px 40px;font-size: 1.2rem;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, sapiente magni magnam, facere dicta at assumenda eaque facilis quisquam </p>
+
+        </div>
+
+    </footer>
+    <div id="last">
+        <h6 style="font-size: 1.4rem;margin-left: 20px;">Copyright@2023||All right reserved by RIYA KASAUDHAN</h6><i class="fa fa-facebook-f fa-2x " style="
+            margin-left: 90px;margin-top: 26px;"></i><i class="fa fa-instagram fa-2x " style="margin-top:26px"></i><i class="fa fa-linkedin-square fa-2x" style="margin-top:26px"></i><i class="fa fa-youtube-play fa-2x" style="margin-top:26px"></i>
+    </div>
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
